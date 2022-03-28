@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exp_005.1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+       
+    function find_longest_word(){
+        str=document.getElementById('str').value
+        var strSplit = str.split(' ');
+        var longestWord = strSplit[0];
+        var shortestWord = strSplit[0];
+        for(var i = 1; i < strSplit.length; i++){
+            if(strSplit[i].length > longestWord.length){
+            longestWord = strSplit[i];
+        }
+        if(strSplit[i].length < longestWord.length){
+            shortestWord = strSplit[i];
+    }
+    document.getElementById("answer").innerHTML="The longest word is  : "+longestWord;
+    document.getElementById("answer1").innerHTML="The shortest word is  : "+shortestWord;
+    }
+}
+    </script>
+    </head>
+    <body>
+
+        <div>
+            Enter the string you want :<input type="text" id="str">
+            <input type="button" value="Click" id="text2" onclick="find_longest_word()">
+        </div>
+
+        <div id="answer">
+        </div>
+        <div id="answer1">
+        </div>
+
+        
+    </body>
+</html>

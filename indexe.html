@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Currency Calculator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function Currency_cal(){
+            Value=document.getElementById('value').value;
+            var Indian_rupee=0.0133*Value;
+            var Dollars=75.1508*Value;
+            var x = document.getElementById("mySelect").selectedIndex;
+            if(x===2){
+
+                document.getElementById("Inr").innerHTML=Value+" Indian Rupees In Dollars is : "+Indian_rupee;
+
+            }
+            if(x===1){
+
+                document.getElementById("Inr").innerHTML=Value+" Dollars In Indian Rupee is : "+Dollars;
+
+            }
+            
+
+        }
+    </script>
+
+    </head>
+    <body>
+        <h1>Currency Converter</h1>
+        <div style="margin: 0px; padding:0px">
+            <fieldset style="width: 35%; margin: 0px; padding: 0px;">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Enter the Value : <input type="text" id="value" style="margin: 5px; margin-left:30px;" required><br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp; Select what you want :<select id="mySelect" style="margin: 5px; margin-left:30px;">
+                    <option>Select</option>
+                    <option>Indian Rupee</option>
+                    <option>Dollars</option>
+                </select>
+                <input type="button" value="Click" id="text2" onclick="Currency_cal()" style="margin:5px; margin-left: 30px;"><br><br>
+            </fieldset>
+            <br><br>
+            <div id="Inr"></div>
+            <div id="dollar"></div>
+    </body>
+</html>
